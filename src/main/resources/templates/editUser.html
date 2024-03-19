@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Edit User</title>
+</head>
+<body>
+<h2>Edit User</h2>
+<form method="post" th:action="@{/users/{id}/edit(id=${user.id})}" th:object="${user}">
+    <label for="name">Name:</label><br>
+    <input id="name" name="name" th:field="*{name}" type="text"><br><br>
+    <input type="submit" value="Save Changes">
+</form>
+</body>
+</html>
